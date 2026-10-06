@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7cf8b949183703107f445b56b3238930" label="Vendor Request" max_length="40" name="x_cdltd_vendor_o_0_vendor_request" type="collection">
+        <element label="Bank Account" max_length="20" name="bank_account" type="string"/>
+        <element label="Risk Score" max_length="40" name="risk_score" read_only="true" type="integer"/>
+        <element label="Annual Contract Value" mandatory="true" max_length="20" name="annual_contract_value" type="currency"/>
+        <element label="Vendor Name" mandatory="true" max_length="40" name="vendor_name" type="string"/>
+        <element choice="3" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Under Review" value="4"/>
+                <element inactive_on_update="false" label="Draft" value="1"/>
+                <element inactive_on_update="false" label="Documents Pending" value="2"/>
+                <element inactive_on_update="false" label="Submitted" value="3"/>
+                <element inactive_on_update="false" label="Rejected" value="6"/>
+                <element inactive_on_update="false" label="Approved" value="5"/>
+            </choice>
+        </element>
+        <element label="Tax ID" mandatory="true" max_length="40" name="tax_id" type="string"/>
+        <element label="Procurement Officer" max_length="32" name="procurement_officer" reference="sys_user" type="reference"/>
+        <element choice="3" default="1&#13;&#10;" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Consulting" value="4"/>
+                <element inactive_on_update="false" label="Raw Material" value="1"/>
+                <element inactive_on_update="false" label="Logistics" value="2"/>
+                <element inactive_on_update="false" label="IT Services" value="3"/>
+                <element inactive_on_update="false" label="Facilities" value="5"/>
+            </choice>
+        </element>
+        <element choice="3" default="1" label="Risk Level" max_length="40" name="risk_level" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="3"/>
+                <element inactive_on_update="false" label="Medium" value="2"/>
+                <element inactive_on_update="false" label="Low" value="1"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Country" mandatory="true" max_length="32" name="country" reference="x_cdltd_vendor_o_0_vendor_country" type="reference"/>
+        <index name="index">
+            <element name="procurement_officer"/>
+        </index>
+        <index name="index2">
+            <element name="country"/>
+        </index>
+    </element>
+</database>

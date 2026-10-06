@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:45:38</sys_created_on>
+        <sys_id>808c3d0d183703107f445b56b323893c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_vendor_o_0_vendor_country.x_cdltd_vendor_o_0.vendor_country_user</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_security_acl display_value="x_cdltd_vendor_o_0_vendor_country">048c3d0d183703107f445b56b323893a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_808c3d0d183703107f445b56b323893c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:45:38</sys_updated_on>
+        <sys_user_role display_value="x_cdltd_vendor_o_0.vendor_country_user" name="x_cdltd_vendor_o_0.vendor_country_user">3b7c3d0d183703107f445b56b323891c</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</application>
+        <file_path/>
+        <instance_id>615c1b1e97eb8358260976c71153af29</instance_id>
+        <instance_name>nowlearning-nlinst04733254-5ppmu-0001</instance_name>
+        <name>sys_security_acl_role_808c3d0d183703107f445b56b323893c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-06 10:45:38</sys_created_on><sys_id>808c3d0d183703107f445b56b323893c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_cdltd_vendor_o_0_vendor_country.x_cdltd_vendor_o_0.vendor_country_user</sys_name><sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package><sys_policy/><sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope><sys_security_acl display_value="x_cdltd_vendor_o_0_vendor_country">048c3d0d183703107f445b56b323893a</sys_security_acl><sys_update_name>sys_security_acl_role_808c3d0d183703107f445b56b323893c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-06 10:45:38</sys_updated_on><sys_user_role display_value="x_cdltd_vendor_o_0.vendor_country_user" name="x_cdltd_vendor_o_0.vendor_country_user">3b7c3d0d183703107f445b56b323891c</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-84700183</payload_hash>
+        <record_name>x_cdltd_vendor_o_0_vendor_country.x_cdltd_vendor_o_0.vendor_country_user</record_name>
+        <reverted_from/>
+        <source>9829b949183703107f445b56b32389bc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:45:38</sys_created_on>
+        <sys_id>888c3d0d183703107f445b56b323893d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a110d1a9c70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:45:38</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>448c3d0d05370310fcf09ba220903a3d</update_guid>
+        <update_guid_history>448c3d0d05370310fcf09ba220903a3d:-84700183</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_cdltd_vendor_o_0_vendor_country.x_cdltd_vendor_o_0.vendor_country_user">2fbc314d183703107f445b56b323897f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:46:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>a9dfd9950a774b97a329038139fc5f41</sys_id>
+        <sys_metadata>808c3d0d183703107f445b56b323893c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_vendor_o_0_vendor_country.x_cdltd_vendor_o_0.vendor_country_user</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_parent display_value="">048c3d0d183703107f445b56b323893a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_scope_delete display_value="">c64f537fd8794688ae2d12944cee8d69</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_808c3d0d183703107f445b56b323893c</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_808c3d0d183703107f445b56b323893c">888c3d0d183703107f445b56b323893d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:46:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

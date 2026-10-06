@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_cdltd_vendor_o_0_vendor_country</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_cdltd_vendor_o_0_vendor_country</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:45:38</sys_created_on>
+        <sys_id>8c8c3d0d183703107f445b56b323893d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_vendor_o_0_vendor_country</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_update_name>sys_security_acl_8c8c3d0d183703107f445b56b323893d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:45:38</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</application>
+        <file_path/>
+        <instance_id>615c1b1e97eb8358260976c71153af29</instance_id>
+        <instance_name>nowlearning-nlinst04733254-5ppmu-0001</instance_name>
+        <name>sys_security_acl_8c8c3d0d183703107f445b56b323893d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Default access control on x_cdltd_vendor_o_0_vendor_country</description><local_or_existing>Existing</local_or_existing><name>x_cdltd_vendor_o_0_vendor_country</name><operation display_value="write">write</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-06 10:45:38</sys_created_on><sys_id>8c8c3d0d183703107f445b56b323893d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_cdltd_vendor_o_0_vendor_country</sys_name><sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package><sys_policy/><sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope><sys_update_name>sys_security_acl_8c8c3d0d183703107f445b56b323893d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-06 10:45:38</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-451136526</payload_hash>
+        <record_name>x_cdltd_vendor_o_0_vendor_country</record_name>
+        <reverted_from/>
+        <source>9829b949183703107f445b56b32389bc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:45:38</sys_created_on>
+        <sys_id>088c3d0d183703107f445b56b323893f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a110d1a9f20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:45:38</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>c08c3d0d02370310f601f6123af54a3f</update_guid>
+        <update_guid_history>c08c3d0d02370310f601f6123af54a3f:-451136526</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 10:46:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>848fb8000bcd4073b708865268c8b431</sys_id>
+        <sys_metadata>8c8c3d0d183703107f445b56b323893d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_vendor_o_0_vendor_country</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_parent display_value="">808c3d0d183703107f445b56b3238945</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_scope_delete display_value="">c64f537fd8794688ae2d12944cee8d69</sys_scope_delete>
+        <sys_update_name>sys_security_acl_8c8c3d0d183703107f445b56b323893d</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_8c8c3d0d183703107f445b56b323893d">088c3d0d183703107f445b56b323893f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 10:46:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
