@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="7cf8b949183703107f445b56b3238930" label="Vendor Request" max_length="40" name="x_cdltd_vendor_o_0_vendor_request" type="collection">
         <element label="Bank Account" max_length="20" name="bank_account" type="string"/>
-        <element label="Risk Score" max_length="40" name="risk_score" read_only="true" type="integer"/>
+        <element label="Risk Score" max_length="40" name="risk_score" type="integer"/>
         <element label="Annual Contract Value" mandatory="true" max_length="20" name="annual_contract_value" type="currency"/>
         <element label="Vendor Name" mandatory="true" max_length="40" name="vendor_name" type="string"/>
         <element choice="3" label="State" max_length="40" name="state" type="choice">
@@ -25,11 +25,11 @@
                 <element inactive_on_update="false" label="Facilities" value="5"/>
             </choice>
         </element>
-        <element choice="3" default="1" label="Risk Level" max_length="40" name="risk_level" read_only="true" type="choice">
+        <element choice="3" default="1" label="Risk Level" max_length="40" name="risk_level" type="choice">
             <choice>
-                <element inactive_on_update="false" label="High" value="3"/>
-                <element inactive_on_update="false" label="Medium" value="2"/>
-                <element inactive_on_update="false" label="Low" value="1"/>
+                <element inactive_on_update="false" label="High" sequence="0" value="3"/>
+                <element inactive_on_update="false" label="Medium" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Low" sequence="1" value="1"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
