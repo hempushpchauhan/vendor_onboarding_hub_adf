@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	if (g_user.hasRole('x_cdltd_vendor_o_0.finance')) {
+		g_form.setDisplay('bank_account', true);
+	} else {
+		g_form.setDisplay('bank_account', false);
+	}
+}]]></script_true>
+        <set_values/>
+        <short_description>Hide Bank Account field for users without Finance role</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 11:01:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8e79839d4d3703107f44893ac9e5c953</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Hide Bank Account field for users without Finance role</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_update_name>sys_ui_policy_8e79839d4d3703107f44893ac9e5c953</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 11:05:28</sys_updated_on>
+        <table>x_cdltd_vendor_o_0_vendor_request</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
