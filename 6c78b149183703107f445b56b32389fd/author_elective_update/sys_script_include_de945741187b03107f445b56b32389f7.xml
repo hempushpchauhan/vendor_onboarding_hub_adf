@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_cdltd_vendor_o_0.VendorRiskUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>VendorRiskUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var VendorRiskUtils = Class.create();
+VendorRiskUtils.prototype = {
+    initialize: function() {
+    },
+
+	calculateRiskScore: function (vendorSysId) {
+		var gr = new GlideRecord('x_cdltd_vendor_o_0_vendor_request');
+		if (gr.get(vendorSysId)) {
+			var totalScore = 0;
+
+			if (gr.country.restricted) {
+				totalScore += 40;
+			}
+
+			if (gr.annual_contract_value > 5000000) {
+				totalScore += 20;
+			}
+
+			if (gr.category === '4') {
+				totalScore += 10;
+			}
+
+			var documentGr = new GlideRecord('x_cdltd_vendor_o_0_vendor_document');
+			documentGr.addQuery('vendor_request', vendorSysId);
+			documentGr.addQuery('received', false);
+			documentGr.query();
+			
+			var penalty = 0;
+			while (documentGr.next() && penalty < 30) {
+				penalty += 10;
+			}
+			totalScore += penalty;
+
+			var riskLevel = "High";
+			if (totalScore < 30) {
+				riskLevel = "Low";
+			} else if (totalScore < 60) {
+				riskLevel = "Medium";
+			}
+
+			return {
+				riskScore: totalScore,
+				riskLevel: riskLevel
+			}
+		}
+
+	},
+
+    type: 'VendorRiskUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 19:31:14</sys_created_on>
+        <sys_id>de945741187b03107f445b56b32389f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>VendorRiskUtils</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_update_name>sys_script_include_de945741187b03107f445b56b32389f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 19:31:53</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</application>
+        <file_path/>
+        <instance_id>615c1b1e97eb8358260976c71153af29</instance_id>
+        <instance_name>nowlearning-nlinst04733254-5ppmu-0001</instance_name>
+        <name>sys_script_include_de945741187b03107f445b56b32389f7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_cdltd_vendor_o_0.VendorRiskUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;VendorRiskUtils&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var VendorRiskUtils = Class.create();
+VendorRiskUtils.prototype = {
+    initialize: function() {
+    },
+
+	calculateRiskScore: function (vendorSysId) {
+		var gr = new GlideRecord('x_cdltd_vendor_o_0_vendor_request');
+		if (gr.get(vendorSysId)) {
+			var totalScore = 0;
+
+			if (gr.country.restricted) {
+				totalScore += 40;
+			}
+
+			if (gr.annual_contract_value &gt; 5000000) {
+				totalScore += 20;
+			}
+
+			if (gr.category === '4') {
+				totalScore += 10;
+			}
+
+			var documentGr = new GlideRecord('x_cdltd_vendor_o_0_vendor_document');
+			documentGr.addQuery('vendor_request', vendorSysId);
+			documentGr.addQuery('received', false);
+			documentGr.query();
+			
+			var penalty = 0;
+			while (documentGr.next() &amp;&amp; penalty &lt; 30) {
+				penalty += 10;
+			}
+			totalScore += penalty;
+
+			var riskLevel = "High";
+			if (totalScore &lt; 30) {
+				riskLevel = "Low";
+			} else if (totalScore &lt; 60) {
+				riskLevel = "Medium";
+			}
+
+			return {
+				riskScore: totalScore,
+				riskLevel: riskLevel
+			}
+		}
+
+	},
+
+    type: 'VendorRiskUtils'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-06 19:31:14&lt;/sys_created_on&gt;&lt;sys_id&gt;de945741187b03107f445b56b32389f7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;VendorRiskUtils&lt;/sys_name&gt;&lt;sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0"&gt;6c78b149183703107f445b56b32389fd&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Vendor Onboarding Hub"&gt;6c78b149183703107f445b56b32389fd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_de945741187b03107f445b56b32389f7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-06 19:31:53&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1581585302</payload_hash>
+        <record_name>VendorRiskUtils</record_name>
+        <reverted_from/>
+        <source>9829b949183703107f445b56b32389bc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 19:31:53</sys_created_on>
+        <sys_id>78f4fb4918bb03107f445b56b323897e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a112b375920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 19:31:53</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>74f4fb49aebb0310e5dbf81cae2fc57e</update_guid>
+        <update_guid_history>74f4fb49aebb0310e5dbf81cae2fc57e:-1581585302,dbc4f7497ebb0310942afbf159f338b4:1444408691</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 19:33:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>5c6ce3873ee4433f8ebfb8e482d2df61</sys_id>
+        <sys_metadata>de945741187b03107f445b56b32389f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VendorRiskUtils</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_scope_delete display_value="">c64f537fd8794688ae2d12944cee8d69</sys_scope_delete>
+        <sys_update_name>sys_script_include_de945741187b03107f445b56b32389f7</sys_update_name>
+        <sys_update_version display_value="sys_script_include_de945741187b03107f445b56b32389f7">78f4fb4918bb03107f445b56b323897e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 19:33:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

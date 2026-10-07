@@ -4,14 +4,14 @@
         <element label="Risk Score" max_length="40" name="risk_score" type="integer"/>
         <element label="Annual Contract Value" mandatory="true" max_length="20" name="annual_contract_value" type="currency"/>
         <element label="Vendor Name" mandatory="true" max_length="40" name="vendor_name" type="string"/>
-        <element choice="3" label="State" max_length="40" name="state" type="choice">
+        <element choice="3" default="1" label="State" max_length="40" name="state" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Under Review" value="4"/>
-                <element inactive_on_update="false" label="Draft" value="1"/>
-                <element inactive_on_update="false" label="Documents Pending" value="2"/>
-                <element inactive_on_update="false" label="Submitted" value="3"/>
-                <element inactive_on_update="false" label="Rejected" value="6"/>
-                <element inactive_on_update="false" label="Approved" value="5"/>
+                <element inactive_on_update="false" label="Under Review" sequence="5" value="4"/>
+                <element inactive_on_update="false" label="Draft" sequence="2" value="1"/>
+                <element inactive_on_update="false" label="Documents Pending" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Submitted" sequence="4" value="3"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="6"/>
+                <element inactive_on_update="false" label="Approved" sequence="0" value="5"/>
             </choice>
         </element>
         <element label="Tax ID" mandatory="true" max_length="40" name="tax_id" type="string"/>

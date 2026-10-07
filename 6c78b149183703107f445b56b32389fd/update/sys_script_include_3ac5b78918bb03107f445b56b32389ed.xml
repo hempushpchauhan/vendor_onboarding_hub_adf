@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_cdltd_vendor_o_0.VendorRiskUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>VendorRiskUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var VendorRiskUtils = Class.create();
+VendorRiskUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	calculateRiskScore: function (vendorSysId) {
+		var gr = new GlideRecordSecure('x_cdltd_vendor_o_0_vendor_request');
+		if (gr.get(vendorSysId)) {
+			var totalScore = 0;
+
+			if (gr.country.restricted) {
+				totalScore += 40;
+			}
+
+			if (gr.annual_contract_value > 5000000) {
+				totalScore += 20;
+			}
+
+			if (gr.category === '4') {
+				totalScore += 10;
+			}
+
+			var documentGr = new GlideRecordSecure('x_cdltd_vendor_o_0_vendor_document');
+			documentGr.addQuery('vendor_request', vendorSysId);
+			documentGr.addQuery('received', false);
+			documentGr.query();
+			
+			var penalty = 0;
+			while (documentGr.next() && penalty < 30) {
+				penalty += 10;
+			}
+			totalScore += penalty;
+
+			var riskLevel = "High";
+			if (totalScore < 30) {
+				riskLevel = "Low";
+			} else if (totalScore < 60) {
+				riskLevel = "Medium";
+			}
+
+			return {
+				riskScore: totalScore,
+				riskLevel: riskLevel
+			};
+		}
+
+	},
+
+	isDuplicateTaxId: function() {
+		var taxId = this.getParameter('sysparm_tax_id');
+
+		var gr = new GlideRecordSecure('x_cdltd_vendor_o_0_vendor_request');
+		gr.addQuery('state', '!=', 5);
+		gr.addQuery('state', '!=', 6);
+		gr.addQuery('tax_id', taxId);
+		gr.query();
+
+		if (gr.hasNext()) {
+			return 'true';
+		}
+
+		return 'false';
+	},
+
+    type: 'VendorRiskUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-06 19:56:09</sys_created_on>
+        <sys_id>3ac5b78918bb03107f445b56b32389ed</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>VendorRiskUtils</sys_name>
+        <sys_package display_value="Vendor Onboarding Hub" source="x_cdltd_vendor_o_0">6c78b149183703107f445b56b32389fd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Vendor Onboarding Hub">6c78b149183703107f445b56b32389fd</sys_scope>
+        <sys_update_name>sys_script_include_3ac5b78918bb03107f445b56b32389ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 06:08:41</sys_updated_on>
+    </sys_script_include>
+</record_update>
